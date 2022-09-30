@@ -175,14 +175,14 @@ nav {
 .item-img {
     display: flex;
     background: #d14444;
-    padding: 2px;
+    padding: 1px;
     border-radius: 5px;
     height: 200px;
 }
 
 .item-img img {
     width: 100%;
-    object-fit:fill;
+    object-fit: cover;
 }
 
 .item-title-price {
