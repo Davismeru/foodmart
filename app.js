@@ -8,8 +8,6 @@ toggleBtn.addEventListener('click', () => {
 window.addEventListener('DOMContentLoaded', ()=> {
     displayMenuItems(allMenuItems)
     renderSpecialItems()
-    addToCart()
-
 })
 
 // display menu items
@@ -136,18 +134,18 @@ const allMenuItems = [
 
     {
         category: "special",
-        img: "img/item14.jpeg",
+        img: "img/valentine.jpg",
         itemName: "Valentine Dinner",
-        price: "2500",
-        description: "hello mr afisaaa what yoour nambaaaa"
+        price: "1500",
+        description: "Delcious way to celebrate your loved one."
     },
 
     {
         category: "special",
-        img: "img/item14.jpeg",
+        img: "img/christmas.jpg",
         itemName: "Christmas Dinner",
         price: "2500",
-        description: "hello mr afisaaa what yoour nambaaaa"
+        description: "Christmas in your mouth"
     }
 ]
 
@@ -190,7 +188,6 @@ filterBtns.forEach(function(btn) {
         displayMenuItems(filterItems)
         menuItems.style.justifyContent = "center"
         specialItemsSection.style.display = "none"
-        addToCart()
     })
 })
 
@@ -223,19 +220,4 @@ function renderSpecialItems() {
                 </div>`
     }).join("")
     specialItemsSection.innerHTML += displaySpecialItems
-}
-
-const itemsOnCart = []
-
-// Add items to cart function
-function addToCart() {
-    const itemContainers = document.querySelectorAll('.item')
-    const cartItems = document.getElementById('cart-items')
-    itemContainers.forEach(function(container) {
-        const activeBtn = container.querySelector('.order-button')
-        activeBtn.addEventListener('click', function() {
-            itemsOnCart.push(container)
-            cartItems.textContent = itemsOnCart.length
-        })
-    })
 }
